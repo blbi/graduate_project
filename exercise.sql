@@ -1,9 +1,10 @@
 create table ROUTINE (
+	video_num int(7) not null,
 	sex varchar(1) not null,
 	timing varchar(10) not null,
 	bodypart varchar(8) not null,
 	url varchar(15) not null,
-	primary key (url)
+	primary key (video_num)
 );
 
 create table EXERCISE (
@@ -17,7 +18,7 @@ create table EXERCISE (
 	timing varchar(10) not null,
 	level varchar(1) not null,
 	url varchar(15) not null,
-	primary key (url)
+	primary key (video_num)
 );
 
 create table USER (
@@ -33,8 +34,8 @@ create table USER (
 );
 
 create table HISTORY (
-	user_num int(6) not null,
-	video_num int(6) not null,
+	user_num int(7) not null,
+	video_num int(7) not null,
 	rating int(1) not null,
 	time timestamp default current_timestamp on update current_timestamp,
 	primary key(user_num)
