@@ -22,7 +22,12 @@ create table EXERCISE (
 	url varchar(100) not null,
 	primary key (video_num)
 );
-
+create table register (
+	ID varchar(20) not null,
+	PW varchar(100) not null,
+	user_num int(6) not null,
+	primary key(ID)
+);
 create table USER (
 	user_num int(6) not null,
 	sex varchar(1) not null,
